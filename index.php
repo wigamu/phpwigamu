@@ -7,4 +7,21 @@ $dbconn = pg_connect($conn_string)
 
 echo "Conectado a la Base de Datos!";
 
+$sql="SELECT * from cliente";
+ 
+$result = pg_query($conn, $sql);
+if(!$result)
+{
+	echo "An error occurred.\n";
+	exit;
+}
+ 
+echo "<table>";
+	while ($row = pg_fetch_array($result))
+	{
+		echo "<tr>";
+			echo "<td>Años:".$row["nombre"]."</td>";
+		echo "<tr>";
+	}
+echo "<table>";
 ?>
