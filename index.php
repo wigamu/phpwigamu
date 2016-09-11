@@ -8,9 +8,9 @@ $dbconn = pg_connect($conn_string)
 echo "Conectado a la Base de Datos!";
 
 $sql="SELECT id_cliente, nombre, apellido, direccion, email, documento_cliente, tipo_cliente, ciudad_cliente, tipo_documento
-	FROM public.cliente;";
+	FROM public.cliente";
  
-$result = pg_query($conn, $sql);
+$result = pg_query($dbconn, $sql);
 if(!$result)
 {
 	echo "An error occurred.\n";
