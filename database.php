@@ -34,4 +34,5 @@ class Database
         self::$cont = null;
     }
 }
+ech "Prueba";
 ?>
